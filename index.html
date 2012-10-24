@@ -1,37 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Valeriy Akintsev</title>
 
-<style>
-body {
-  background-color: #FCFCFC;
-}
-</style>
-
+<script type="text/javascript" src="scripts/shCore.js"></script>
+<script type="text/javascript" src="scripts/shBrushJava.js"></script>
+<script type="text/javascript" src="scripts/shBrushScala.js"></script>
+<script type="text/javascript" src="scripts/shBrushPerl.js"></script>
+<script type="text/javascript" src="scripts/shBrushSql.js"></script>
+<script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+<link href="styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-<pre>
-
-
+<pre class="brush: java, highlight : [9, 11,12,13], ruler: true;">
 public static void main(String... summary) {
-	PrintStream o = System.out;
-	try {
-		o.format("- %s\n", summary[0]);
-		main(Arrays.copyOfRange(summary, 1, summary.length));
+	PrintStream o = System.out; 
+	try { 
+		o.format("- %s\n", summary[0]); 
+		main(Arrays.copyOfRange(summary, 1, summary.length)); 
 	} catch (ArrayIndexOutOfBoundsException e) {
-	} catch (Exception e) {o.append("Ops!");}
-}
-...
-main(new String[] {"Akintsev Valeriy",
-				   	"Senior Java Developer", 
+	} catch (Exception e) {o.append("Ops!");}}
+
+main(new String[] {"Akintsev Valeriy", 
+
+				   	"Senior Java Developer",
 				   	"With more then 6 years expirience", 
-				   	"Deep knowlage of Java, OOP and patterns"})
-...
-object AdditionalLangs extends App{
+				   	"Deep knowlage of Java, OOP and patterns"}) 
+
+</pre>
+<pre class="brush : scala, first-line : 13, highlight : [13, 14, 15, 16, 17]">
+object AdditionalSkills extends App{
 	print(langList(List("* Scala", 
 						"* Perl", 
 						"* JavaScript", 
@@ -40,29 +41,29 @@ def langList(x : List[String]) : String =
 		x match {
 		 case List() => "----------------"
 		 case x1 :: xs => x1 + "\n" + langList(xs)
-		}
-}
-...
-sub my_contacts {
+		}}
+</pre>
+
+<pre class="brush : perl, first-line : 23, highlight : [28, 29,30]">
+sub My_Contacts {
 	while (my ($k, $v) = each(@_[0])) {
         printf "%s\t:%s\n", $k , $v;
     }
 };
-my_contacts {
+My_Contacts {
 	'skype' => 'mtakvel',
-	'mail'  => 'mtakvel@gmail.com',
-};
-...
-function Interests(text){
-	$("body #ps").html(text);
-}
-$(document).ready(function() { ps("develop, study, family, travels, reads, photo") });
-...
-select 'BR, Valeriy Akintsev' from dual
-
+	'mail'  => 'mtakvel@gmail.com',};
 </pre>
-	
-	
+<pre class="brush : js, first-line : 31, highlight : [31,32]">
+function Interests(text){ $("body #ps").html(text); }
+$(document).ready(function() { ps("My family, study, travels, reads, photo") });
+</pre>
+<pre class="brush : sql, first-line : 33, highlight : [33]">
+select 'BR, Valeriy Akintsev' from dual
+</pre>
+
+
+
 	<script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -74,6 +75,8 @@ select 'BR, Valeriy Akintsev' from dual
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+   SyntaxHighlighter.defaults.toolbar = false;
+   SyntaxHighlighter.all()
 
 </script>
 </body>
