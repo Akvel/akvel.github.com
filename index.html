@@ -13,11 +13,54 @@ body {
 
 </head>
 <body>
-	
 
-	Coming soon...
+<pre>
 
-	<!-- :-)))) -->
+
+public static void main(String... summary) {
+	PrintStream o = System.out;
+	try {
+		o.format("- %s\n", summary[0]);
+		main(Arrays.copyOfRange(summary, 1, summary.length));
+	} catch (ArrayIndexOutOfBoundsException e) {
+	} catch (Exception e) {o.append("Ops!");}
+}
+...
+main(new String[] {"Akintsev Valeriy",
+				   	"Senior Java Developer", 
+				   	"With more then 6 years expirience", 
+				   	"Deep knowlage of Java, OOP and patterns"})
+...
+object AdditionalLangs extends App{
+	print(langList(List("* Scala", 
+						"* Perl", 
+						"* JavaScript", 
+						"* PL/SQL")))
+def langList(x : List[String]) : String = 
+		x match {
+		 case List() => "----------------"
+		 case x1 :: xs => x1 + "\n" + langList(xs)
+		}
+}
+...
+sub my_contacts {
+	while (my ($k, $v) = each(@_[0])) {
+        printf "%s\t:%s\n", $k , $v;
+    }
+};
+my_contacts {
+	'skype' => 'mtakvel',
+	'mail'  => 'mtakvel@gmail.com',
+};
+...
+function Interests(text){
+	$("body #ps").html(text);
+}
+$(document).ready(function() { ps("develop, study, family, travels, reads, photo") });
+...
+select 'BR, Valeriy Akintsev' from dual
+
+</pre>
 	
 	
 	<script type="text/javascript">
